@@ -5,7 +5,7 @@ on:
   pull_request:
   workflow_dispatch:
   
-  jobs: 
+jobs: 
     myfirstjob: 
              name: First job
              runs-on: ubuntu-latest
@@ -13,9 +13,9 @@ on:
              - name: Step One
                uses: actions/checkout@v3
              - name: Step Two
-                run: |
+                run:|
                   touch newfile.yaml
-                  echo: "Plase Alex is Friday let me escape" >> newfile.yaml
+                  echo "Plase Alex is Friday let me escape" >> newfile.yaml
                   cat newfile.yaml
                   pwd
                   

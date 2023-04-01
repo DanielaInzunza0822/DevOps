@@ -18,4 +18,18 @@ jobs:
                   echo "Plase Alex is Friday let me escape" >> newfile.yaml
                   cat newfile.yaml
                   pwd
+    mysecondjob: 
+                needs: [myfirstjob]
+                name: SecondJob job
+                runs-on: macos-latest
+                steps:
+                - name: Step One
+                  run: date
+    thirdjob: 
+           name: ThirdJob job
+           runs-on: windows-latest
+           steps:
+           - name: Step One
+             run: date
+                  
                   
